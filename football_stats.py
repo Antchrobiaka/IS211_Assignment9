@@ -1,3 +1,4 @@
+
 from bs4 import BeautifulSoup
 def scrape_football_stats():
     html_data = """
@@ -23,7 +24,7 @@ def scrape_football_stats():
     </table>
     """
     soup = BeautifulSoup(html_data, "html.parser")
-    rows = soup.find_all("tr")[1:]  
+    rows = soup.find_all("tr")[1:]
     print("\n🏈 Top NFL Scoring Leaders (Sample Data)\n")
     print(f"{'Rank':<5}{'Team':<8}{'Player':<25}{'Pos':<5}{'PTS':<5}")
     print("-" * 55)
